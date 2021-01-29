@@ -1,0 +1,20 @@
+{% extends "common/layout.html" %}
+{% block content %}
+    <p>Hello World!</p>
+    <p>My name is {{ name }}</p>
+    <p>
+        {% if info %}
+        TEL:{{ info.tel }}, AGE:{{ info.age }},
+        {% endif %}
+        {% for num in hen %}
+        {{ num }}
+        {% endfor %}
+    </p>
+    <p> FLASK SQL</br>
+        {% if sql_result %}
+        {% for items in sql_result %}
+        User:{{items['User'],items['Host']}}</br>
+        {% endfor %}
+        {% endif %}
+    </p>
+{% endblock %}
